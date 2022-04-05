@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="419.0" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #facf5a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane fx:id="Pane1" layoutY="76.0" prefHeight="293.0" prefWidth="700.0" style="-fx-background-color: #4f4f4f;">
+         <children>
+            <Label layoutX="162.0" layoutY="73.0" text="Пароль:" textFill="#facf5a">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="S1_RegButton1" layoutX="216.0" layoutY="147.0" mnemonicParsing="false" onAction="#RegisterStartAction" onMouseDragOver="#RegBtnDragOver" onMouseDragReleased="#RegBtnMouseRelease" onMouseEntered="#RegMouseEnter" onMouseExited="#RegMouseExited" prefHeight="49.0" prefWidth="269.0" style="-fx-background-color: #ffffff;" text="РЕГИСТРАЦИЯ">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="S1_LoginButton1" layoutX="216.0" layoutY="214.0" mnemonicParsing="false" onAction="#LoginStartAction" onMouseDragOver="#LgnBtnDragOver" onMouseDragReleased="#LgnBtnDragReleased" onMouseEntered="#LgnMouseEnter" onMouseExited="#LgnMouseExit" prefHeight="49.0" prefWidth="269.0" style="-fx-background-color: #ffffff;" text="ВХОД">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <TextField fx:id="S1_InputField1" layoutX="162.0" layoutY="43.0" onAction="#LogInputAction" onInputMethodTextChanged="#Log_LogInput" prefHeight="25.0" prefWidth="377.0" />
+            <TextField fx:id="S1_InputField2" layoutX="162.0" layoutY="92.0" onAction="#PassInputAction" prefHeight="25.0" prefWidth="377.0" />
+            <Label layoutX="162.0" layoutY="25.0" text="Логин:" textFill="#facf5a">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="300.0" layoutY="-9.0" prefHeight="100.0" prefWidth="101.0" text="SPM" textFill="#4f4f4f">
+         <font>
+            <Font name="Freestyle Script" size="72.0" />
+         </font></Label>
+      <Label layoutX="248.0" layoutY="82.0" text="Students Project Management" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="379.0" textFill="#4f4f4f">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Pane fx:id="Pane2" layoutX="1.0" layoutY="79.0" prefHeight="277.0" prefWidth="700.0" style="-fx-background-color: #4f4f4f;" visible="false">
+         <children>
+            <TextField fx:id="RegLogInput" layoutX="103.0" layoutY="32.0" onInputMethodTextChanged="#RegLogInputChanged" prefHeight="25.0" prefWidth="495.0" promptText="Введите логин">
+               <font>
+                  <Font name="Candara Bold Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="RegPassInput" layoutX="103.0" layoutY="61.0" onInputMethodTextChanged="#InputPassChanged" prefHeight="25.0" prefWidth="495.0" promptText="Введите пароль">
+               <font>
+                  <Font name="Candara Bold Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="RegConfirmPassInput" layoutX="103.0" layoutY="90.0" onInputMethodTextChanged="#InputPassConfirmChanged" prefHeight="25.0" prefWidth="495.0" promptText="Подтвердите пароль">
+               <font>
+                  <Font name="Candara Bold Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="RegInputEmail" layoutX="103.0" layoutY="119.0" onInputMethodTextChanged="#InputMailChanged" prefHeight="25.0" prefWidth="495.0" promptText="Введите адрес электронной почты">
+               <font>
+                  <Font name="Candara Bold Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="Reg_ConfirmReg1" layoutX="202.0" layoutY="152.0" mnemonicParsing="false" onAction="#ConfirmRegister1" prefHeight="38.0" prefWidth="307.0" style="-fx-background-color: #ffffff;" text="РЕГИСТРАЦИЯ ПОЛЬЗОВАТЕЛЯ">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="Reg_ConfirmAdmin1" layoutX="201.0" layoutY="233.0" mnemonicParsing="false" onAction="#ConfirmRegisterAdmin1" prefHeight="38.0" prefWidth="307.0" style="-fx-background-color: #ffffff;" text="РЕГИСТРАЦИЯ АДМИНА">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <TextField fx:id="RegInputAdmin" layoutX="202.0" layoutY="199.0" prefHeight="25.0" prefWidth="307.0" promptText="Введите пароль админа">
+               <font>
+                  <Font name="Candara Bold Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="BackButton1" layoutX="511.0" layoutY="6.0" mnemonicParsing="false" onAction="#RegGoBack1" prefHeight="21.0" prefWidth="87.0" style="-fx-background-color: #facf5a;" text="Назад" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

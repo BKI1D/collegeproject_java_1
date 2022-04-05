@@ -1,0 +1,62 @@
+CREATE TABLE `adminpass` (
+  `idAdminPass` int(11) NOT NULL AUTO_INCREMENT,
+  `AdminPass` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '000000',
+  PRIMARY KEY (`idAdminPass`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `projects` (
+  `idProjects` int(11) NOT NULL AUTO_INCREMENT,
+  `FirstName` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `SecondName` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Theme` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Group` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Dedline` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ConceptDateEnd` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ConceptDateRec` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ConceptMark` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppBaseDateEnd` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppBaseDateRec` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppBaseMark` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppAddDateEnd` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppAddDateRec` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AppAddMark` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DocumentDateEnd` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DocumentDateRec` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DocumentMark` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `PassedSections` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `TotalMark` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  PRIMARY KEY (`idProjects`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `users` (
+  `idUsers` int(11) NOT NULL AUTO_INCREMENT,
+  `Login` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Password` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Email` varchar(254) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `AccessCode` int(11) NOT NULL,
+  PRIMARY KEY (`idUsers`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `romtable` (
+  `idROMtable` int(11) NOT NULL AUTO_INCREMENT,
+  `CurrentUser` varchar(30) NOT NULL,
+  PRIMARY KEY (`idROMtable`),
+  UNIQUE KEY `idROMtable_UNIQUE` (`idROMtable`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `readytocompelete` (
+  `idreadytocompelete` int(11) NOT NULL AUTO_INCREMENT,
+  `IDofUser` int(11) NOT NULL,
+  PRIMARY KEY (`idreadytocompelete`),
+  UNIQUE KEY `idreadytocompelete_UNIQUE` (`idreadytocompelete`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `archive` (
+  `idarchive` int(11) NOT NULL AUTO_INCREMENT,
+  `FName` varchar(45) NOT NULL,
+  `SecName` varchar(45) NOT NULL,
+  `Theme` varchar(80) NOT NULL,
+  `Mark` varchar(2) NOT NULL,
+  PRIMARY KEY (`idarchive`),
+  UNIQUE KEY `idarchive_UNIQUE` (`idarchive`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
